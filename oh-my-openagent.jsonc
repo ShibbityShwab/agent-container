@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+
+  "experimental": {
+    "task_system": true,
+    "aggressive_truncation": true
+  },
+
+  "runtime_fallback": {
+    "enabled": true,
+    "retry_on_errors": [429, 500, 502, 503, 504, "rate limit", "timeout"],
+    "max_fallback_attempts": 4,
+    "cooldown_seconds": 30
+  },
+
+  "background_task": {
+    "defaultConcurrency": 4
+  },
+
+  "categories": {
+    "quick": {
+      "model": "google/gemini-3-flash",
+      "prompt_append": "Be fast and concise for simple tasks."
+    },
+    "deep": {
+      "model": "google/gemini-3.1-pro",
+      "fallback_models": [
+        "openrouter/deepseek-v4-pro",
+        "opencode-go/deepseek-v4-pro",
+        "opencode-go/qwen3.7-max"
+      ]
+    },
+    "plan": {
+      "model": "google/gemini-3.1-pro",
+      "fallback_models": [
+        "openrouter/qwen3.7-max",
+        "opencode-go/qwen3.7-max",
+        "opencode-go/kimi-k2.6"
+      ]
+    }
+  },
+
+  "agents": {
+    "sisyphus": {
+      "model": "google/gemini-3.1-pro",
+      "fallback_models": [
+        "openrouter/deepseek-v4-pro",
+        "opencode-go/qwen3.7-max"
+      ]
+    },
+    "prometheus": {
+      "model": "google/gemini-3.1-pro"
+    }
+  }
+}
