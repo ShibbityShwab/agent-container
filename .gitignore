@@ -1,0 +1,28 @@
+# =============================================
+# OpenCode + Oh-My-OpenAgent
+# NEVER commit secrets or local state
+# =============================================
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# OpenCode / Oh-My-OpenAgent local state
+.omo/
+
+# Bun / Node artifacts (if any local dev)
+node_modules/
+*.log
+npm-debug.log*
+
+# OS / Editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker build artifacts (if building locally)
+*.tar

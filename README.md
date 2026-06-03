@@ -48,9 +48,10 @@ opencode web
 Or use the background service (see below).
 
 ### 5. Access from Phone
-**Option A (Recommended)**: Use Cloudflare Tunnel (see `cloudflared-setup.md`)
 
-**Option B**: Deploy the `Dockerfile` to Railway → access the public Railway URL from your phone browser.
+**Simplest (Zero Config)**: Deploy the `Dockerfile` to Railway → access the public Railway URL from your phone browser.
+
+**Self-Hosted with Local Access**: Use Cloudflare Tunnel (see `cloudflared-setup.md`). Best if you want to run locally but access from your phone without deploying.
 
 ## Key Files
 

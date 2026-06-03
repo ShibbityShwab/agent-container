@@ -1,5 +1,6 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  // NOTE: Ideally pin this to a specific commit hash or release tag for maximum stability.
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/main/assets/oh-my-opencode.schema.json",
 
   "experimental": {
     "task_system": true,

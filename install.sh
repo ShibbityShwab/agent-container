@@ -15,6 +15,7 @@ echo "Installing OpenCode globally..."
 bun install -g opencode-ai
 
 echo "Installing Oh-My-OpenAgent..."
+# Keep these flags in sync with install.ps1 and Dockerfile
 bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no || true
 
 echo "Pulling latest code and state..."

@@ -12,10 +12,19 @@ Write-Host "Installing OpenCode globally..." -ForegroundColor Green
 bun install -g opencode-ai
 
 Write-Host "Installing Oh-My-OpenAgent..." -ForegroundColor Green
-bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no
+# Keep these flags in sync with install.sh and Dockerfile
+try {
+    bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no
+} catch {
+    Write-Host "Warning: Oh-My-OpenAgent install step failed. Continuing..." -ForegroundColor Yellow
+}
 
 Write-Host "Pulling latest code and state..." -ForegroundColor Green
-git pull --rebase
+try {
+    git pull --rebase
+} catch {
+    Write-Host "Warning: git pull failed (dirty tree or no remote). Continuing..." -ForegroundColor Yellow
+}
 
 Write-Host ""
 Write-Host "✅ Installation complete!" -ForegroundColor Green

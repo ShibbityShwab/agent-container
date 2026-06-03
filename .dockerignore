@@ -1,0 +1,24 @@
+# OpenCode + Oh-My-OpenAgent
+# Exclude everything not needed in the container image
+
+# Documentation & scripts
+README.md
+cloudflared-setup.md
+install.sh
+install.ps1
+helpers/
+systemd/
+
+# Secrets (should never be baked into images)
+.env
+.env.*
+
+# Git metadata
+.git/
+.gitattributes
+.gitignore
+
+# Local state
+.omo/
+node_modules/
+*.log
