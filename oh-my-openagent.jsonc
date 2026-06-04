@@ -1,6 +1,7 @@
 {
-  // NOTE: Ideally pin this to a specific commit hash or release tag for maximum stability.
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/main/assets/oh-my-opencode.schema.json",
+  // NOTE: The upstream schema is currently only available on the dev branch.
+  // If this breaks, check: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
 
   "experimental": {
     "task_system": true,
