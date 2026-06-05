@@ -14,7 +14,7 @@ bun install -g opencode-ai
 Write-Host "Installing Oh-My-OpenAgent..." -ForegroundColor Green
 # Keep these flags in sync with install.sh and Dockerfile
 try {
-    bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no
+    bunx oh-my-openagent install --no-tui --claude=no --gemini=yes --copilot=no --opencode-zen=no
 } catch {
     Write-Host "Warning: Oh-My-OpenAgent install step failed. Continuing..." -ForegroundColor Yellow
 }

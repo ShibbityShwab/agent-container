@@ -14,7 +14,7 @@ COPY . .
 
 # Install OMO on first run (or bake it in)
 # Keep these flags in sync with install.sh and install.ps1
-RUN bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no || true
+RUN bunx oh-my-openagent install --no-tui --claude=no --gemini=yes --copilot=no --opencode-zen=no || true
 
 EXPOSE 8080
 

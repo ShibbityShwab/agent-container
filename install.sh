@@ -16,7 +16,7 @@ bun install -g opencode-ai
 
 echo "Installing Oh-My-OpenAgent..."
 # Keep these flags in sync with install.ps1 and Dockerfile
-bunx oh-my-openagent install --no-tui --gemini=yes --opencode-zen=no || true
+bunx oh-my-openagent install --no-tui --claude=no --gemini=yes --copilot=no --opencode-zen=no || true
 
 echo "Pulling latest code and state..."
 git pull --rebase || true
