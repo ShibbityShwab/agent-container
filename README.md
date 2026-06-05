@@ -56,7 +56,7 @@ Or use the background service (see below).
 ## Key Files
 
 - `opencode.json` — Base config (cloud-first)
-- `oh-my-openagent.jsonc` — Multi-agent orchestration + cascading fallbacks (lean cloud version)
+- `oh-my-openagent.json` — Multi-agent orchestration + cascading fallbacks (lean cloud version)
 - `.env` — All your API keys (never commit real keys)
 - `systemd/opencode.service` — Autostart on Arch Linux with env vars loaded
 
@@ -67,7 +67,7 @@ Primary models used in the configs:
 - Deep planning / complex work: `google/gemini-3.1-pro` or `openrouter/deepseek-v4-pro`
 - Best value upgrade: `opencode-go/qwen3.7-max` or `opencode-go/kimi-k2.6` (after subscribing to OpenCode Go)
 
-Fallback chains are already configured in `oh-my-openagent.jsonc`.
+Fallback chains are already configured in `oh-my-openagent.json`.
 
 ## Background / Autostart
 
